@@ -6,12 +6,12 @@ package agh.ii.prinjava.lab02.exc02_01;
 
 public interface StackOfInts {
 
-    /**Function to remove the last int added to the stack
+    /**Function removing the last int added to the stack
      *
      */
     int pop();
 
-    /**Function to add an int to the stack
+    /**Function adding an int to the stack
      *
      */
     void push(int x);
