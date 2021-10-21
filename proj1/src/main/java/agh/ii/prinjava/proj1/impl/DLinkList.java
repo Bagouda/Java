@@ -7,17 +7,18 @@ public class DLinkList<E> {
      */
     Node<E> first;
     Node<E> last;
+    int length = 0;
     /**
      * add an element at the beginning of the list
      * @param elem is the element to add
      */
     void addFirst(E elem){
         Node<E> node = new Node<E>(elem);
+        length ++;
         if (this.first != null) {
             node.next = first;
         }else{
             this.last = node;
-
         }
 
         this.first = node;
@@ -28,15 +29,15 @@ public class DLinkList<E> {
      * @param elem is the element to add
      */
     void addLast(E elem){
+        length ++;
         Node<E> node = new Node<E>(elem);
         if (this.last != null){
             this.last.next = node;
             node.prev = this.last;
-
         }else{
             this.first = node;
-
         }
+
         this.last = node;
     }
 
@@ -46,13 +47,12 @@ public class DLinkList<E> {
      * @return the value of the first element of the list
      */
     E removeFirst(){
-        Node<E> temp = this.first;
-        if (this.first  != null  ){
-            this.first = this.first.next;
-        }
-        if(temp == null)
+        length --;
+        if(this.first == null)
             return null;
-        return temp.elem;
+        E temp = this.first.elem;
+        this.first = this.first.next;
+        return temp;
     }
 
     /**
@@ -60,13 +60,12 @@ public class DLinkList<E> {
      * @return the value of the last element of the list
      */
     E removeLast(){
-        Node<E> temp = this.last;
-        if (this.last  != null  ){
-            this.last = this.last.prev;
-        }
-        if(temp == null)
+        length --;
+        if(last == null)
             return null;
-        return temp.elem;
+        E temp = this.last.elem;
+        this.last = this.last.prev;
+        return temp;
     }
 
     /**
@@ -78,20 +77,24 @@ public class DLinkList<E> {
         return "DLinkList{" +
                 "first=" + first +
                 ", last=" + last +
+                ", length=" + length +
                 '}';
     }
-
 
     /**
      * return the value of a given node
      * @param node which contain the value we want to return
      * @return the value of the node
      */
-    public E peek_node(Node <E> node){
+    E peek_node(Node <E> node){
         if (node == null)
             return null;
         return node.elem;
 
+    }
+
+    int numElem(){
+        return length;
     }
 
     /**

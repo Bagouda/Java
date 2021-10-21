@@ -5,11 +5,6 @@ import agh.ii.prinjava.proj1.MyQueue;
 public class MyQueueDLLBImpl<E> implements MyQueue<E> {
     private final DLinkList<E> elems = new DLinkList<>();
 
-    /**
-     * number_node is an integer representing the number of nodes in the queue
-     */
-    private int number_node = 0;
-
 
     /**
      * enqueue add a node at the end of the queue
@@ -18,7 +13,6 @@ public class MyQueueDLLBImpl<E> implements MyQueue<E> {
     @Override
     public void enqueue(E x) {
         this.elems.addLast(x);
-        this.number_node ++;
     }
 
     /**
@@ -27,8 +21,6 @@ public class MyQueueDLLBImpl<E> implements MyQueue<E> {
      */
     @Override
     public E dequeue() {
-
-        this.number_node --;
         return this.elems.removeFirst();
     }
 
@@ -38,7 +30,7 @@ public class MyQueueDLLBImpl<E> implements MyQueue<E> {
      */
     @Override
     public int numOfElems() {
-        return this.number_node;
+        return elems.numElem();
     }
 
     /**

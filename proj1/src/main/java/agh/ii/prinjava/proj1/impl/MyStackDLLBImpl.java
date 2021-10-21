@@ -4,10 +4,6 @@ import agh.ii.prinjava.proj1.MyStack;
 
 public class MyStackDLLBImpl<E> implements MyStack<E> {
     private final DLinkList<E> elems = new DLinkList<>();
-    /**
-     * number_node represente the number of node in the stack
-     */
-    private int number_node = 0;
 
 
     /**
@@ -16,7 +12,6 @@ public class MyStackDLLBImpl<E> implements MyStack<E> {
      */
     @Override
     public E pop() {
-        this.number_node --;
         return this.elems.removeFirst();
     }
 
@@ -26,7 +21,6 @@ public class MyStackDLLBImpl<E> implements MyStack<E> {
      */
     @Override
     public void push(E x) {
-        this.number_node ++;
         this.elems.addFirst(x);
 
     }
@@ -37,7 +31,7 @@ public class MyStackDLLBImpl<E> implements MyStack<E> {
      */
     @Override
     public int numOfElems() {
-        return this.number_node;
+        return this.elems.numElem();
     }
 
     /**

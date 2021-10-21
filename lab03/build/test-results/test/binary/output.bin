@@ -1,0 +1,20 @@
+Setup
+	enqueue
+
+tearDown
+Setup
+numOfElems
+
+tearDown
+Setup
+peek
+
+tearDown
+Setup
+newQueueIsEmpty
+
+tearDown
+Setup
+	dequeue
+
+tearDown

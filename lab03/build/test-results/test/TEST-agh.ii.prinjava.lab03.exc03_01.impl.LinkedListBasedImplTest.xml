@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="agh.ii.prinjava.lab03.exc03_01.impl.LinkedListBasedImplTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2021-10-07T16:03:39" hostname="DESKTOP-DIUJ1PF" time="0.028">
+  <properties/>
+  <testcase name="enqueue()" classname="agh.ii.prinjava.lab03.exc03_01.impl.LinkedListBasedImplTest" time="0.022"/>
+  <testcase name="numOfElems()" classname="agh.ii.prinjava.lab03.exc03_01.impl.LinkedListBasedImplTest" time="0.001"/>
+  <testcase name="peek()" classname="agh.ii.prinjava.lab03.exc03_01.impl.LinkedListBasedImplTest" time="0.0"/>
+  <testcase name="newQueueIsEmpty()" classname="agh.ii.prinjava.lab03.exc03_01.impl.LinkedListBasedImplTest" time="0.001"/>
+  <testcase name="dequeue()" classname="agh.ii.prinjava.lab03.exc03_01.impl.LinkedListBasedImplTest" time="0.001"/>
+  <system-out><![CDATA[Setup
+enqueue
+tearDown
+Setup
+numOfElems
+tearDown
+Setup
+peek
+tearDown
+Setup
+newQueueIsEmpty
+tearDown
+Setup
+dequeue
+tearDown
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
