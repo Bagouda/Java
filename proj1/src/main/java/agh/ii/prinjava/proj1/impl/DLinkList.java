@@ -93,6 +93,10 @@ public class DLinkList<E> {
 
     }
 
+    /**
+     * return the number of node in the list
+     * @return the number of element
+     */
     int numElem(){
         return length;
     }

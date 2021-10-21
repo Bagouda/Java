@@ -71,4 +71,19 @@ class DLinkListTest {
         assertEquals(1 , dLinkList.removeLast());
     }
 
+    /**
+     * we test numElem by adding and removing element to the list and checking if the number match reality
+     */
+    @Test
+    void numElem() {
+
+        assertEquals(0,dLinkList.numElem());
+        dLinkList.addLast(1);
+        assertEquals(1,dLinkList.numElem());
+        dLinkList.addLast(1);
+        assertEquals(2,dLinkList.numElem());
+        dLinkList.removeFirst();
+        assertEquals(1,dLinkList.numElem());
+
+    }
 }
